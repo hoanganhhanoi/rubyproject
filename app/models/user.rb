@@ -12,7 +12,4 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
 
-  def setup
-    @user = User.new(name: "Example user", email: "user@gmail.com")
-  end
 end
