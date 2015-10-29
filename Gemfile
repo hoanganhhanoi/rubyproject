@@ -9,6 +9,8 @@ gem 'sqlite3'
 gem 'bootstrap-sass', '3.2.0.0'
 # Make password digest, use bcrypt
 gem 'bcrypt', '3.1.7'
+# Devise 
+gem 'devise', '~> 3.4.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
