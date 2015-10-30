@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   # truoc khi validates ta se kiem tra truong password hien tai bang lenh 
   # if: -> { password.present? }
   # vi vay ham has_secure_password se khong duoc goi neu password.present la false tuc la truong password da co gia tri nguoc voi blank? 
-  validates :password, presence: true, length: { minimum: 6 }, if: -> { password.present? }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true, if: -> { password.present? }
   validates :password_confirmation, presence: true
 
   # Remember token
