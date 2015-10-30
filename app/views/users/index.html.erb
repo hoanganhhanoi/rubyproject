@@ -2,11 +2,16 @@
 
 <h1>All users</h1>
 
+<!-- Khi su dung will_paginate neu khong truyen tham so la doi tuong thi khong su dung duoc.
+O day ta truyen @user tuc la truyen vao 1 danh sach user vao trong gem will_paginate.
+Trong tutorial ho khong truyen vao. Khong hieu sao ma ho van chay duoc. -->
+<div class="top_pagination_user">
+  <%= will_paginate @user %>
+</div>
 <ul class="users">
-  <% @user.each do |user| %>
-    <li>
-      <%= gravatar_for user, size: 50 %>
-      <%= link_to user.name, user %>
-    </li>
-  <% end %>
+  <%= render @user %>
 </ul>
+
+<div class="bottom_pagination_user">
+  <%= will_paginate @user %>
+</div>
